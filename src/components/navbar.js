@@ -36,12 +36,8 @@ export default class navbar extends Component {
   render() {
     return (
       <nav className='navbar navbar-expand-sm bg-light navbar-light'>
-        {/* <Link to="/" className="navbar-brand">
-          <img src={logo} alt="logo" />
-          Coffee
-        </Link> */}
-        <Link to="/" className="navbar-brand">
-          <img src={logo} alt="logo" width="50" height="50"/>
+        <Link to='/' className='navbar-brand'>
+          <img src={logo} alt='coffee cup' width='50' height='50'/>
         </Link>
         <button 
           className='navbar-toggler' 
