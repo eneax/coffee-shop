@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Coffee Shop`,
+    title: `Joe's Coffee Shop`,
     description: `Responsive coffee shop website built with Gatsby.`,
     author: `@eneax`,
   },
