@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from "../components/bgSection"
 import Info from "../components/info"
+import Menu from "../components/menu"
 
 
 const IndexPage = ({ data }) => (
@@ -16,6 +17,7 @@ const IndexPage = ({ data }) => (
       styleClass='default-background'
     />
     <Info />
+    <Menu items={data.menu} />
   </Layout>
 )
 
@@ -28,6 +30,24 @@ export const query = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    menu: allContentfulCoffeeItem {
+      edges {
+        node {
+          id
+          title
+          description {
+            description
+          }
+          price
+          category
+          image {
+            fixed(width:50, height:50) {
+              ...GatsbyContentfulFixed
+            }
+          }
         }
       }
     }
