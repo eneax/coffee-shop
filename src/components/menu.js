@@ -3,13 +3,39 @@ import Img from 'gatsby-image'
 import Title from './title'
 
 
+const getCategories = (items) => {
+  let tempItems = items.map((items) => {
+    return items.node.category
+  })
+
+  let tempCategories = new Set(tempItems) // Set returns unique values
+  let categories = Array.from(tempCategories)
+  categories = ['all', ...categories]
+  return categories
+}
+
 export default class Menu extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      items: props.items.edges,
-      coffeeItem: props.items.edges
+      items: props.items.edges,                       // all the items that we get from Contentful
+      coffeeItems: props.items.edges,                 // the items that are being rendered
+      categories: getCategories(props.items.edges),
+    }
+  }
+
+  handleItems = (category) => {
+    let tempItems = [...this.state.items]
+    if(category === 'all') {
+      this.setState(() => ({
+        coffeeItems: tempItems
+      }))
+    } else {
+      let items = tempItems.filter(({node}) => node.category === category)
+      this.setState(() => ({
+        coffeeItems: items
+      }))
     }
   }
 
@@ -20,18 +46,35 @@ export default class Menu extends Component {
           <div className='container'>
             <Title title='best of our menu' />
             {/* categories */}
+            <div className="row mb-5">
+              <div className="col-10 mx-auto text-center">
+                {this.state.categories.map((category, id) => (
+                  <button 
+                    key={id}
+                    type='button'
+                    className='btn btn-yellow text-capitalize m-3'
+                    onClick={() => { this.handleItems(category) }}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+            </div>
             {/* items */}
             <div className='row'>
-              {this.state.coffeeItem.map(({ node }) => (
+              {this.state.coffeeItems.map(({ node }) => (
                 <div key={node.id} className='col-11 col-md-6 my-3 d-flex mx-auto'>
                   <div>
                     <Img fixed={node.image.fixed} />
                   </div>
-                  {/* items */}
                   <div className='flex-grow-1 px-3'>
                     <div className="d-flex justify-content-between">
-                      <h6 className="mb-0">{node.title}</h6>
-                      <h6 className="mb-0">${node.price}</h6>
+                      <h6 className="mb-0">
+                        <span>{node.title}</span>
+                      </h6>
+                      <h6 className="mb-0 text-yellow">
+                        <span>${node.price}</span>
+                      </h6>
                     </div>
                     <p className="text-muted">
                       <small>{node.description.description}</small>
