@@ -15,7 +15,7 @@ const PRODUCTS_QUERY = graphql`
           price
           image {
             fluid(maxHeight:426) {
-              src
+              src   # it's needed for Snipcart
               ...GatsbyContentfulFluid
             }
           }
