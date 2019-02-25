@@ -48,6 +48,12 @@ module.exports = {
         apiKey: process.env.SNIPCART_API,
         autopop: true,  // cart pops every time we add something into it
 			}
-		}
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
   ],
 }
