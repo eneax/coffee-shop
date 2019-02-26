@@ -1,14 +1,25 @@
 import React from 'react'
 import BackgroundImage from 'gatsby-background-image'
+import styled from 'styled-components'
+
+
+const Title = styled.h1`
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  font-weight: 700;
+`
+
 
 const BackgroundSection = ({ img, styleClass, title, children }) => (
   <BackgroundImage
     className={styleClass}
     fluid={img}
   >
-    <h1 className='title text-white text-uppercase text-center display-4 font-weight-bold'>
-      {title}
-    </h1>
+    <Title>{title}</Title>
     {children}
   </BackgroundImage>
 )
