@@ -24,12 +24,13 @@ h1, h2, h3, h4, h5, h6 {
 .cart-icon {
   cursor: pointer;
   color: var(--mainYellow);
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .default-background,
 .about-background {
-  min-height: 100vh;
+  /* min-height: calc(100vh - 247px); */
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,9 +38,9 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center;
   background-size: cover;
 }
-.about-background {
+/* .about-background {
   min-height: 60vh;
-}
+} */
 
 .btn-yellow {
   color: var(--mainYellow);
