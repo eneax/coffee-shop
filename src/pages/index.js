@@ -28,7 +28,7 @@ export default IndexPage
 
 export const query = graphql`
   {
-    bgImg:file(relativePath: {eq: "default-background.jpeg"}) {
+    bgImg:file(relativePath: {eq: "default-background.jpg"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
