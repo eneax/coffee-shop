@@ -30,11 +30,11 @@ h1, h2, h3, h4, h5, h6 {
 .default-background,
 .about-background {
   /* min-height: calc(100vh - 247px); */
-  min-height: 50vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(255, 158, 9, .5), rgba(255, 158, 9, .5));
+  background: linear-gradient(rgba(34, 34, 34, .6), rgba(34, 34, 34, .6));
   background-position: center;
   background-size: cover;
 }
