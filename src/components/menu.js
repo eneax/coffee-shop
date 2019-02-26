@@ -73,7 +73,7 @@ export default class Menu extends Component {
                         <span>{node.title}</span>
                       </h6>
                       <h6 className="mb-0 text-yellow">
-                        <span>${node.price}</span>
+                        <span>${node.price.toFixed(2)}</span>
                       </h6>
                     </div>
                     <p className="text-muted">

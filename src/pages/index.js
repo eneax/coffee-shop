@@ -35,7 +35,9 @@ export const query = graphql`
         }
       }
     }
-    menu: allContentfulCoffeeItem {
+    menu: allContentfulCoffeeItem(sort: {
+      fields: createdAt
+    }) {
       edges {
         node {
           id
