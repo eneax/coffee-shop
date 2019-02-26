@@ -5,12 +5,11 @@ import { FaShoppingCart } from 'react-icons/fa'
 import logo from '../images/logo.svg'
 
 
-
 const HeaderWrapper = styled.header`
   background-color: #fff;
   color: rgba(0, 0, 0, .8);
   text-align: center;
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
   /* padding-bottom: 2rem; */
   font-family: 'avenir next', avenir, sans-serif;
 
@@ -39,21 +38,23 @@ const HeaderWrapper = styled.header`
 `
 
 const NavbarWrapper = styled.nav`
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  /* border-top: 1px solid #E1E1E1; */
+  /* border-bottom: 1px solid #E1E1E1; */
+  /* border-bottom: 2px solid #393939; */
+
   text-align: center;
   /* max-width: 48rem; */
   margin-right: auto;
   margin-left: auto;
-  margin-top: 2rem;
+  margin-top: 1rem;
 
-  a {
+  a, span {
     color: rgba(0, 0, 0, .8);
-    font-size: .875rem;
+    font-size: 1rem;
     display: inline-block;
     padding: 1rem;
+    transform: skew(-15deg);
+    border: 1px solid #E1E1E1;
     
     /* link */
     text-decoration: none;
@@ -79,7 +80,7 @@ const NavbarWrapper = styled.nav`
 
   @media (min-width: 60em) {
     a {
-      font-size: .875rem;
+      font-size: 1rem;
       padding-left: 2rem;
       padding-right: 2rem;
     }
@@ -99,12 +100,16 @@ const Navbar = () => (
       <Link to='/'>Home</Link>
       <Link to='/about'>About</Link>
       <Link to='/contact'>Contact</Link>
-      <FaShoppingCart className='cart-icon snipcart-checkout' />
+      <span>
+        <FaShoppingCart className='cart-icon snipcart-checkout' />
+      </span>
     </NavbarWrapper>
   </HeaderWrapper>
 )
 
 export default Navbar
+
+
 
 
 
