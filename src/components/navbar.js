@@ -42,27 +42,23 @@ const NavbarWrapper = styled.nav`
   margin-top: 1rem;
 
   a, span {
-    color: rgba(0, 0, 0, .8);
     font-size: 1rem;
     display: inline-block;
     padding: 1rem;
-    transform: skew(-15deg);
-    border: 1px solid #E1E1E1;
-    
+
+    background: linear-gradient(to bottom, #ece8dc 0%, #ece8dc 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: rgba(0, 0, 0, .8);
     text-decoration: none;
-    transition: color .15s ease-in;
-    &:link, &:visited, &:hover, &:active {
-      transition: color .15s ease-in;
-    }
-    &:focus {
-      transition: color .15s ease-in;
-      outline: 1px dotted currentColor;
-    }
-    &:hover, &:focus {
-      transition: background-color .15s ease-in-out;
-      background-color: #cdecff;
+    transition: background-size .2s;
+
+    &:hover {
+      background-size: 4px 50px;
     }
   }
+
 
   @media (min-width: 60em) {
     a {
