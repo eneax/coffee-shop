@@ -82,6 +82,7 @@ const Navbar = () => (
       <Link to='/'>Home</Link>
       <Link to='/about'>About</Link>
       <Link to='/contact'>Contact</Link>
+      <Link to='/shop'>Shop</Link>
       <span>
         <FaShoppingBag className='cart-icon snipcart-checkout' />
       </span>
