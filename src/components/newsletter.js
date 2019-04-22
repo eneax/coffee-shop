@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { HeadingTwo } from './headings'
 
 const InfoSection = styled.section`
   padding-top: 3rem;
@@ -56,17 +56,6 @@ const InfoWrapper = styled.div`
   }
 `
 
-const HeadingTwo = styled.h2`
-  color: #222;
-  text-transform: uppercase;
-  text-align: center;
-
-  font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.2;
-  font-weight: 700;
-`
-
 const Input = styled.input`
   display: inline-block;
   font-weight: 400;
@@ -102,8 +91,7 @@ const Newsletter = () => (
   <InfoSection>
     <Container>
       <InfoWrapper>
-        <HeadingTwo>Join Our Newsletter</HeadingTwo>
-
+        <HeadingTwo header='Join Our Newsletter' />
 
         {/* Begin MailChimp Signup Form */}
         <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css" />

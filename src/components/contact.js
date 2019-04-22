@@ -1,10 +1,10 @@
 import React from 'react'
-import Title from './title'
+import { HeadingOne } from './headings'
 
 
 const Contact = () => (
   <section className='contact py-5'>
-    <Title title='contact us' />
+    <HeadingOne header='contact us' />
 
     <div className='row'>
       <div className='col-10 col-sm-8 col-md-6 mx-auto'>

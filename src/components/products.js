@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Product from './product'
-import Title from './title'
+import { HeadingOne } from './headings'
 
 
 const PRODUCTS_QUERY = graphql`
@@ -31,7 +31,7 @@ const Products = () => (
     render={(data) => (
       <section className='py-5'>
         <div className='container'>
-          <Title title='our products' />
+          <HeadingOne header='our products' />
           <div className='row'>
             {data.products.edges.map(({ node:product }) => (
               <Product 

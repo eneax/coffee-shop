@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Img from 'gatsby-image'
-import Title from './title'
+import { HeadingOne } from './headings'
 
 
 const getCategories = (items) => {
@@ -44,7 +44,7 @@ export default class Menu extends Component {
       return (
         <section className='menu py-5'>
           <div className='container'>
-            <Title title='best of our menu' />
+            <HeadingOne header='best of our menu' />
             {/* categories */}
             <div className="row mb-5">
               <div className="col-10 mx-auto text-center">
@@ -90,7 +90,7 @@ export default class Menu extends Component {
       return (
         <section className='menu py-5'>
           <div className='container'>
-            <Title title='best of our menu' />
+            <HeadingOne header='best of our menu' />
             <div className='row'>
               <div className='col-10 col-sm-6 mx-auto text-center'>
                 <h1>There are no items to display!</h1>
