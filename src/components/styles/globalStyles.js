@@ -37,12 +37,35 @@ export const Container = styled.div`
   }
 `
 
+export const InfoWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  -ms-flex: 0 0 83.333333%;
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+
+  @media (min-width: 576px) {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+
+  p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #6c757d;
+    margin-bottom: 3rem;
+  }
+`
+
 export const colors = {
-  mainWhite: `#fff`,
-  mainBlack: `#262626`,
-  mainYellow: `#FFBB00`,
-  secYellow: `#ffc933`,
-  mainGrey: `#474747`,
+  
 }
 
 export const transDefault = 'transition: all .3s ease-in-out';
@@ -67,32 +90,4 @@ export const border = ({
   color = 'white',
 }) => {
   return `border:${width} ${type} ${color}`
-}
-
-
-export const QuickInfoWrapper = styled.div`
-  width: 90%; /* 90% of 90vw */
-  margin: 2rem auto;
-
-  .text {
-    line-height: 2rem;
-    color: ${colors.mainGrey};
-    word-spacing: .2rem;
-    margin-bottom: 1rem;
-  }
-
-  @media (min-width: 768px) {
-    width: 70%;
-  }
-  @media (min-width: 992px) {
-    width: 60%;
-  }
-`
-
-export const bgImg = {
-  position: 'absolute',
-  left: 0,
-  top: 0,
-  width: '100%',
-  height: '100%'
 }
