@@ -5,10 +5,12 @@ import "./bootstrap.min.css"
 import "./layout.css"
 import Navbar from './navbar'
 import Footer from './footer'
+import { GlobalStyle } from '../components/styles/globalStyles'
 
 const Layout = ({ children }) => (
   <>
     <Navbar />
+    <GlobalStyle />
     { children }
     <Footer />
   </>
