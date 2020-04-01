@@ -1,9 +1,8 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 
-import Product from './product'
-import { HeadingOne } from './headings'
-
+import Product from './product';
+import { HeadingOne } from './headings';
 
 const PRODUCTS_QUERY = graphql`
   {
@@ -14,8 +13,8 @@ const PRODUCTS_QUERY = graphql`
           title
           price
           image {
-            fluid(maxHeight:426) {
-              src   # it's needed for Snipcart
+            fluid(maxHeight: 426) {
+              src # it's needed for Snipcart
               ...GatsbyContentfulFluid
             }
           }
@@ -23,18 +22,18 @@ const PRODUCTS_QUERY = graphql`
       }
     }
   }
-`
+`;
 
 const Products = () => (
-  <StaticQuery 
+  <StaticQuery
     query={PRODUCTS_QUERY}
-    render={(data) => (
-      <section className='py-5'>
-        <div className='container'>
-          <HeadingOne header='our products' />
-          <div className='row'>
-            {data.products.edges.map(({ node:product }) => (
-              <Product 
+    render={data => (
+      <section className="py-5">
+        <div className="container">
+          <HeadingOne header="our products" />
+          <div className="row">
+            {data.products.edges.map(({ node: product }) => (
+              <Product
                 key={product.id}
                 product={product} // we pass the entire node to the product component
               />
@@ -44,6 +43,6 @@ const Products = () => (
       </section>
     )}
   />
-)
+);
 
-export default Products
+export default Products;

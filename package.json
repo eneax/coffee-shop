@@ -23,7 +23,8 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.9.0",
     "styled-components": "^5.0.1",
-    "tailwindcss": "^1.2.0"
+    "tailwindcss": "^1.2.0",
+    "tailwind.macro": "^1.0.0-alpha.10"
   },
   "keywords": [
     "gatsby",
@@ -55,7 +56,6 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
-    "prettier": "^1.19.1",
-    "tailwind.macro": "^1.0.0-alpha.10"
+    "prettier": "^1.19.1"
   }
 }

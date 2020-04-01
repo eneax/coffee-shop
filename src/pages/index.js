@@ -1,13 +1,12 @@
-import React from "react"
-import { graphql } from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import BackgroundSection from "../components/bgSection"
-import Info from "../components/info"
-import Menu from "../components/menu"
-import Newsletter from "../components/newsletter"
-
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import BackgroundSection from '../components/bgSection';
+import Info from '../components/info';
+import Menu from '../components/menu';
+import Newsletter from '../components/newsletter';
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -15,29 +14,26 @@ const IndexPage = ({ data }) => (
     <BackgroundSection
       img={data.bgImg.childImageSharp.fluid}
       title="welcome to joe's"
-      styleClass='default-background'
+      styleClass="default-background"
     />
     <Info />
     <Menu items={data.menu} />
     <Newsletter />
   </Layout>
-)
+);
 
-export default IndexPage
-
+export default IndexPage;
 
 export const query = graphql`
   {
-    bgImg:file(relativePath: {eq: "default-background.jpg"}) {
+    bgImg: file(relativePath: { eq: "default-background.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    menu: allContentfulCoffeeItem(sort: {
-      fields: createdAt
-    }) {
+    menu: allContentfulCoffeeItem(sort: { fields: createdAt }) {
       edges {
         node {
           id
@@ -48,7 +44,7 @@ export const query = graphql`
           price
           category
           image {
-            fixed(width:50, height:50) {
+            fixed(width: 50, height: 50) {
               ...GatsbyContentfulFixed
             }
           }
@@ -56,4 +52,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

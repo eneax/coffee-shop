@@ -1,5 +1,4 @@
-import { createGlobalStyle } from "styled-components"
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -13,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     color: #262626;
     background: #fff;
   }
-`
+`;
 
 export const Container = styled.div`
   width: 100%;
@@ -35,7 +34,7 @@ export const Container = styled.div`
   @media (min-width: 1200px) {
     max-width: 1140px;
   }
-`
+`;
 
 export const InfoWrapper = styled.div`
   position: relative;
@@ -62,11 +61,9 @@ export const InfoWrapper = styled.div`
     color: #6c757d;
     margin-bottom: 3rem;
   }
-`
+`;
 
-export const colors = {
-  
-}
+export const colors = {};
 
 export const transDefault = 'transition: all .3s ease-in-out';
 
@@ -74,20 +71,12 @@ export const transObject = ({
   property = 'all',
   time = '.3s',
   type = 'ease-in-out',
-}) => {
-  return `transition: ${property} ${time} ${type}`
-}
+}) => `transition: ${property} ${time} ${type}`;
 
-export const letterSpacing = ({ spacing = '.1rem' }) => {
-  return `letter-spacing:${spacing}`
-}
+export const letterSpacing = ({ spacing = '.1rem' }) =>
+  `letter-spacing:${spacing}`;
 
-export const baskerville = `font-family: baskerville,serif;`
+export const baskerville = `font-family: baskerville,serif;`;
 
-export const border = ({
-  width = '.15rem',
-  type = 'solid',
-  color = 'white',
-}) => {
-  return `border:${width} ${type} ${color}`
-}
+export const border = ({ width = '.15rem', type = 'solid', color = 'white' }) =>
+  `border:${width} ${type} ${color}`;
