@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 
-import styled from 'styled-components'
-import { Container, InfoWrapper } from '../components/styles/globalStyles'
+import styled from 'styled-components';
+import { Container, InfoWrapper } from './styles/globalStyles';
 
 const InfoSection = styled.section`
   padding-top: 3rem;
   padding-bottom: 3rem;
-`
+`;
 
 const HeadingTwo = styled.h2`
   color: #222;
@@ -18,12 +18,12 @@ const HeadingTwo = styled.h2`
   font-weight: 300;
   line-height: 1.2;
   font-weight: 700;
-`
+`;
 
 const Button = styled.button`
   display: inline-block;
   font-weight: 400;
-  color:  rgb(255, 158, 9);
+  color: rgb(255, 158, 9);
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -36,20 +36,21 @@ const Button = styled.button`
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
   &:hover {
-    background:  rgb(255, 158, 9);
+    background: rgb(255, 158, 9);
     color: #2d1e1f;
   }
-  &:focus, &.focus {
+  &:focus,
+  &.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
 
   text-transform: uppercase;
-`
-
+`;
 
 const Info = () => (
   <InfoSection>
@@ -57,16 +58,17 @@ const Info = () => (
       <InfoWrapper>
         <HeadingTwo>our story</HeadingTwo>
         <p>
-          Nestled in the heart of New York’s West Village, we are a community based coffee & tea house with a small, friendly staff of passionate baristas, skilled cooks and a belief that good things can come from simple ideas.
+          Nestled in the heart of New York’s West Village, we are a community
+          based coffee & tea house with a small, friendly staff of passionate
+          baristas, skilled cooks and a belief that good things can come from
+          simple ideas.
         </p>
-        <Link to='/about'>
-          <Button>
-            About
-          </Button>
+        <Link to="/about">
+          <Button>About</Button>
         </Link>
       </InfoWrapper>
     </Container>
   </InfoSection>
-)
+);
 
-export default Info
+export default Info;
