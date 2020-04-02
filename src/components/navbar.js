@@ -4,88 +4,95 @@ import styled from 'styled-components';
 import { FaShoppingBag } from 'react-icons/fa';
 import logo from '../images/logo.svg';
 
-const HeaderWrapper = styled.header`
-  background-color: #fff;
-  color: rgba(0, 0, 0, 0.8);
-  font-family: 'avenir next', avenir, sans-serif;
-  text-align: center;
+import { grey, darkGrey, above, below } from '../utils';
+import { dimOnHover } from '../elements';
+
+const NavBarWrapper = styled.div`
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  ${above.laptop`
+    display: table;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  `}
 
   a {
-    display: inline-block;
-    padding: 1rem;
-  }
+    color: ${grey};
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    ${dimOnHover};
+    ${above.laptop`
+      display: table-cell;
+      text-align: left;
+      margin-bottom: 0;
+    `}
 
-  h1 {
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-    font-family: baskerville, serif;
-    font-style: italic;
-    font-weight: 100;
-    font-size: 3rem;
-  }
+    img {
+      ${below.tablet`
+        margin-bottom: 1rem;
+      `}
+    }
 
-  h2 {
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-    font-size: 0.875rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    .gatsby-image-wrapper {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 100%;
+      ${below.tablet`
+        margin-bottom: 0;
+      `}
+    }
   }
 `;
 
-const NavbarWrapper = styled.nav`
+const NavLinkWrapper = styled.div`
+  display: block;
+  width: 100%;
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 1rem;
+  ${above.laptop`
+    display: table-cell;
+    width: 75%;
+    text-align: right;
+  `}
 
-  a,
-  span {
-    font-size: 1rem;
+  a {
+    ${dimOnHover};
+    color: ${darkGrey};
+    font-size: 0.875rem;
     display: inline-block;
-    padding: 1rem;
-
-    background: linear-gradient(to bottom, #ece8dc 0%, #ece8dc 100%);
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 4px 4px;
-    color: rgba(0, 0, 0, 0.8);
-    text-decoration: none;
-    transition: background-size 0.2s;
-
-    &:hover {
-      background-size: 4px 50px;
-    }
-  }
-
-  @media (min-width: 60em) {
-    a {
+    margin-right: 1rem;
+    ${above.mobileM`
+      font-size: .975rem;
+    `}
+    ${above.mobileL`
       font-size: 1rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
+      margin-right: 2rem;
+    `}
+  }
+  a:last-child {
+    margin-right: 0;
   }
 `;
 
 const Navbar = () => (
-  <HeaderWrapper>
+  <NavBarWrapper>
     <Link to="/">
       <img src={logo} alt="coffee cup" width="35" height="35" />
     </Link>
-    <h1>Joe's</h1>
-    <h2>Coffee Shop</h2>
 
-    <NavbarWrapper>
-      <Link to="/">Home</Link>
+    <NavLinkWrapper>
       <Link to="/about">About</Link>
       <Link to="/contact">Contact</Link>
       <Link to="/shop">Shop</Link>
       <span>
         <FaShoppingBag className="cart-icon snipcart-checkout" />
       </span>
-    </NavbarWrapper>
-  </HeaderWrapper>
+    </NavLinkWrapper>
+  </NavBarWrapper>
 );
 
 export default Navbar;
