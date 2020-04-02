@@ -9,12 +9,17 @@
 body {
   background: var(--mainWhite);
   color: var(--mainBlack);
-  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Courier New', Courier, monospace !important;
-  letter-spacing: .25rem !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.25rem !important;
 }
 
 .text-yellow {
@@ -25,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   color: var(--mainBlack);
   font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .default-background,
@@ -33,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(34, 34, 34, .6), rgba(34, 34, 34, .6));
+  background: linear-gradient(rgba(34, 34, 34, 0.6), rgba(34, 34, 34, 0.6));
   background-position: center;
   background-size: cover;
 }
