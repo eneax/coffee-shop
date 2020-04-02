@@ -1,6 +1,6 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   siteMetadata: {
@@ -43,17 +43,31 @@ module.exports = {
       },
     },
     {
-			resolve: 'gatsby-plugin-snipcart',
-			options: {
-        apiKey: process.env.SNIPCART_API,
-        autopop: true,  // cart pops every time we add something into it
-			}
-    },
-    {
-      resolve: `gatsby-plugin-styled-components`,
+      resolve: 'gatsby-plugin-snipcart',
       options: {
-        // Add any options here
+        apiKey: process.env.SNIPCART_API,
+        autopop: true, // cart pops every time we add something into it
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto`,
+            variants: [`300`, `400`, `500`, `700`],
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
+    `gatsby-plugin-styled-components`,
   ],
-}
+};
