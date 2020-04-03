@@ -1,27 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import BackgroundImage from 'gatsby-background-image';
-import styled from 'styled-components';
 
-const Title = styled.h1`
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.2;
-  font-weight: 700;
-`;
+import { Title } from '../elements';
+import { fluidObject } from '../utils';
 
-const BackgroundSection = ({ img, styleClass, title, children }) => (
-  <BackgroundImage className={styleClass} fluid={img}>
-    <Title>{title}</Title>
-    {children}
-  </BackgroundImage>
-);
+const BackgroundSection = ({ img, title, styleClass, children }) => {
+  console.log(children);
+
+  return (
+    <BackgroundImage className={styleClass} fluid={img}>
+      <Title>{title}</Title>
+      {children}
+    </BackgroundImage>
+  );
+};
+
+BackgroundSection.propTypes = {
+  img: fluidObject.isRequired,
+  title: PropTypes.string.isRequired,
+  styleClass: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};
 
 export default BackgroundSection;
-
-BackgroundSection.defaultProps = {
-  title: 'default title',
-  styleClass: 'default background',
-};
