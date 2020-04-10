@@ -7,7 +7,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import defaultTheme from '../theme';
 import './bootstrap.min.css';
 import './layout.css';
-import Navbar from './navbar';
+import Navbar from './navbar/navbar';
 import Footer from './footer';
 
 const Layout = ({ children }) => (
