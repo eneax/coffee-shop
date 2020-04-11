@@ -26,7 +26,6 @@ h6 {
   color: var(--mainYellow);
 }
 
-.default-background,
 .about-background {
   min-height: 60vh;
   display: flex;
