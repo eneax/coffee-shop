@@ -1,74 +1,54 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import styled from 'styled-components';
-import { Container, InfoWrapper } from './styles/globalStyles';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 
-const InfoSection = styled.section`
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-`;
+const useStyles = makeStyles(theme => ({
+  infoContent: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(12, 0, 10),
+  },
+  infoButtons: {
+    marginTop: theme.spacing(4),
+  },
+  linkButton: {
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'none',
+    },
+  },
+}));
 
-const HeadingTwo = styled.h2`
-  color: #222;
-  text-transform: uppercase;
-  text-align: center;
+const Info = () => {
+  const classes = useStyles();
 
-  font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.2;
-  font-weight: 700;
-`;
-
-const Button = styled.button`
-  display: inline-block;
-  font-weight: 400;
-  color: rgb(255, 158, 9);
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid rgb(255, 158, 9);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
-  &:hover {
-    background: rgb(255, 158, 9);
-    color: #2d1e1f;
-  }
-  &:focus,
-  &.focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
-
-  text-transform: uppercase;
-`;
-
-const Info = () => (
-  <InfoSection>
-    <Container>
-      <InfoWrapper>
-        <HeadingTwo>our story</HeadingTwo>
-        <p>
-          Nestled in the heart of New York’s West Village, we are a community
-          based coffee & tea house with a small, friendly staff of passionate
-          baristas, skilled cooks and a belief that good things can come from
-          simple ideas.
-        </p>
-        <Link to="/about">
-          <Button>About</Button>
-        </Link>
-      </InfoWrapper>
-    </Container>
-  </InfoSection>
-);
+  return (
+    <div className={classes.infoContent}>
+      <Container maxWidth="md">
+        <Typography variant="h5" align="center" color="textSecondary" paragraph>
+          Welcome to Fairy Cake - your home for all things baking and
+          decorating. From cups and toppers to pearls and gems, we’ve got your
+          cake covered. If you can dream it, we’ll help you create it. Let’s get
+          baking!
+        </Typography>
+        <div className={classes.infoButtons}>
+          <Grid container spacing={2} justify="center">
+            <Grid item>
+              <Link to="/about-us" className={classes.linkButton}>
+                <Button variant="contained" color="primary">
+                  About Us
+                </Button>
+              </Link>
+            </Grid>
+          </Grid>
+        </div>
+      </Container>
+    </div>
+  );
+};
 
 export default Info;
