@@ -53,6 +53,7 @@ const NavBarCollapse = ({ classes }) => (
     <div className={classes.navbarButton} id="appbar-collapse">
       {navbarItems.map(navbarItem => (
         <Link
+          key={navbarItem}
           className={classes.navbarButtonLink}
           to={`/${navbarItem.replace(/\s+/g, '-').toLowerCase()}`}
         >
@@ -70,6 +71,7 @@ const NavBarCollapse = ({ classes }) => (
     <NavBarCollapseButton>
       {navbarItems.map(navbarItem => (
         <Link
+          key={navbarItem}
           className={classes.navbarCollapseButtonLink}
           to={`/${navbarItem.replace(/\s+/g, '-').toLowerCase()}`}
         >
