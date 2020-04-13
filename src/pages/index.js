@@ -6,7 +6,8 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Hero from '../components/hero';
 import Info from '../components/info';
-import Menu from '../components/menu';
+import Menu from '../components/menu/menu';
+
 import Newsletter from '../components/newsletter';
 
 const Homepage = ({ data }) => (
