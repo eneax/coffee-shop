@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
 
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 
-import { fixedObject } from '../../utils';
+import { fluidObject } from '../../utils';
 import TabPanel from './menuTab';
+import Card from '../card';
 
 // utils
 const getCategories = items => {
@@ -33,6 +35,10 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     width: '100%',
     backgroundColor: theme.palette.background.primary,
+  },
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
   },
 }));
 
@@ -88,14 +94,22 @@ const ScrollableTabs = ({ menu }) => {
       </AppBar>
 
       {/* menu items */}
-      {coffeeItems.map(({ node }) => (
-        <TabPanel key={node.id} value={value} index={value}>
-          <Img fixed={node.image.fixed} />
-          <span>{node.title}</span>
-          <span>${node.price.toFixed(2)}</span>
-          <small>{node.description.description}</small>
-        </TabPanel>
-      ))}
+      <Container className={classes.cardGrid} maxWidth="md">
+        <Grid container spacing={4}>
+          {coffeeItems.map(({ node }) => (
+            <Grid item key={node.id} xs={12} sm={6} md={4}>
+              <TabPanel value={value} index={value}>
+                <Card
+                  img={node.image.fluid}
+                  title={node.title}
+                  price={node.price}
+                  description={node.description.description}
+                />
+              </TabPanel>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     </div>
   ) : (
     <p>There are no items to display!</p>
@@ -114,7 +128,7 @@ ScrollableTabs.propTypes = {
           }),
           price: PropTypes.number.isRequired,
           category: PropTypes.string.isRequired,
-          img: fixedObject,
+          img: fluidObject,
         }).isRequired,
       }).isRequired
     ),
