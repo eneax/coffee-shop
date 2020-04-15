@@ -22,6 +22,10 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     color: theme.palette.text.secondary,
   },
+  price: {
+    cursor: 'default',
+    pointerEvents: 'none',
+  },
 }));
 
 const CustomCard = ({ img, title, price, description }) => {
@@ -40,7 +44,7 @@ const CustomCard = ({ img, title, price, description }) => {
         <Typography>{description}</Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary" className={classes.price}>
           ${price.toFixed(2)}
         </Button>
       </CardActions>
