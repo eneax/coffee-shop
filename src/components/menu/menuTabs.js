@@ -7,9 +7,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 
-import { fluidObject } from '../../utils';
+import { fluidObject, menuIcons } from '../../utils';
 import TabPanel from './menuTab';
 import Card from '../card';
 
@@ -82,7 +81,7 @@ const ScrollableTabs = ({ menu }) => {
           {categories.map((category, id) => (
             <Tab
               key={id}
-              icon={<FavoriteIcon />}
+              icon={menuIcons[category]}
               label={category}
               onClick={() => {
                 handleItems(category);
