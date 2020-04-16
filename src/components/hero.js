@@ -85,7 +85,7 @@ const Hero = ({ img }) => {
 };
 
 Hero.propTypes = {
-  img: fluidObject.isRequired,
+  img: fluidObject,
 };
 
 export default Hero;
