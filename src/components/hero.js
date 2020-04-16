@@ -1,39 +1,50 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
+import Img from 'gatsby-image';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
 import { fluidObject } from '../utils';
 
 const useStyles = makeStyles(theme => ({
-  bgImg: {
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
+  heroContainer: {
     justifyContent: 'center',
-    backgroundPosition: 'center',
+    textAlign: 'center',
+    marginTop: 100,
+  },
+  bgHeroImg: {
+    position: 'relative',
+    color: theme.palette.text.primary,
     backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    height: '60vh',
+  },
+  heroImg: {
+    display: 'none',
+  },
+  heroOverlay: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    right: 0,
+    left: 0,
+    backgroundColor: 'rgba(0,0,0,.3)',
   },
   heroContent: {
-    padding: theme.spacing(12, 0, 10),
-    minHeight: '100vh',
-    width: '100%',
-    background:
-      'linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) calc(100% - 150px), rgba(0, 0, 0, 0.23) calc(100% - 60px), rgba(0, 0, 0, 0.35))',
-    backgroundSize: 'cover',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    position: 'relative',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    padding: theme.spacing(3),
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(6),
+    },
   },
-  heroTitle: {
-    fontWeight: 'bold',
-  },
-  heroSubTitle: {},
   heroButtons: {
     marginTop: theme.spacing(4),
   },
@@ -43,40 +54,33 @@ const Hero = ({ img }) => {
   const classes = useStyles();
 
   return (
-    <BackgroundImage fluid={img} className={classes.bgImg}>
-      <div className={classes.heroContent}>
-        <Container maxWidth="md">
-          <Typography
-            variant="h6"
-            align="center"
-            color="textPrimary"
-            className={classes.heroSubTitle}
-          >
+    <Container maxWidth="lg" className={classes.heroContainer}>
+      <BackgroundImage fluid={img} className={classes.bgHeroImg}>
+        {/* Increase the priority of the hero background image */}
+        <Img className={classes.heroImg} fluid={img} alt="Hero Image" />
+
+        <div className={classes.heroOverlay} />
+
+        <div className={classes.heroContent}>
+          <Typography variant="h5" color="inherit" paragraph>
             Baking and decorating supplies
           </Typography>
-          <Typography
-            component="h1"
-            variant="h2"
-            align="center"
-            color="textPrimary"
-            className={classes.heroTitle}
-          >
+          <Typography component="h1" variant="h3" color="inherit" gutterBottom>
             Because life is sweet
           </Typography>
+
           <div className={classes.heroButtons}>
-            <Grid container spacing={2} justify="center">
-              <Grid item>
-                <Link to="/shop">
-                  <Button variant="contained" color="primary">
-                    Shop Now
-                  </Button>
-                </Link>
-              </Grid>
-            </Grid>
+            <Link to="/shop">
+              <Button variant="contained" color="primary">
+                Shop Now
+              </Button>
+            </Link>
           </div>
-        </Container>
-      </div>
-    </BackgroundImage>
+        </div>
+
+        {/* </Paper> */}
+      </BackgroundImage>
+    </Container>
   );
 };
 
