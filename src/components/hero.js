@@ -45,8 +45,14 @@ const useStyles = makeStyles(theme => ({
       padding: theme.spacing(6),
     },
   },
-  heroButtons: {
+  heroButton: {
     marginTop: theme.spacing(4),
+  },
+  linkButton: {
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'none',
+    },
   },
 }));
 
@@ -69,8 +75,8 @@ const Hero = ({ img }) => {
             Because life is sweet
           </Typography>
 
-          <div className={classes.heroButtons}>
-            <Link to="/shop">
+          <div className={classes.heroButton}>
+            <Link to="/shop" className={classes.linkButton}>
               <Button variant="contained" color="primary">
                 Shop Now
               </Button>
