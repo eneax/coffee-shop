@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
-import Img from 'gatsby-image';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -24,9 +23,6 @@ const useStyles = makeStyles(theme => ({
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     height: '60vh',
-  },
-  heroImg: {
-    display: 'none',
   },
   heroOverlay: {
     position: 'absolute',
@@ -62,9 +58,6 @@ const Hero = ({ img }) => {
   return (
     <Container maxWidth="lg" className={classes.heroContainer}>
       <BackgroundImage fluid={img} className={classes.bgHeroImg}>
-        {/* Increase the priority of the hero background image */}
-        <Img className={classes.heroImg} fluid={img} alt="Hero Image" />
-
         <div className={classes.heroOverlay} />
 
         <div className={classes.heroContent}>
