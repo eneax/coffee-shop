@@ -4,7 +4,6 @@ import BackgroundImage from 'gatsby-background-image';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
@@ -16,13 +15,17 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     marginTop: 100,
   },
-  bgHeroImg: {
+  heroImg: {
     position: 'relative',
     color: theme.palette.text.primary,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     height: '60vh',
+    boxShadow:
+      '0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)',
+    borderRadius: '4px',
+    overflow: 'hidden',
   },
   heroOverlay: {
     position: 'absolute',
@@ -57,7 +60,7 @@ const Hero = ({ img }) => {
 
   return (
     <Container maxWidth="lg" className={classes.heroContainer}>
-      <BackgroundImage fluid={img} className={classes.bgHeroImg}>
+      <BackgroundImage fluid={img} className={classes.heroImg}>
         <div className={classes.heroOverlay} />
 
         <div className={classes.heroContent}>
@@ -76,8 +79,6 @@ const Hero = ({ img }) => {
             </Link>
           </div>
         </div>
-
-        {/* </Paper> */}
       </BackgroundImage>
     </Container>
   );
