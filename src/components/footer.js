@@ -1,18 +1,46 @@
 import React from 'react';
 
-const Footer = () => (
-  <footer className="footer py-3">
-    <div className="container">
-      <div className="row">
-        <div className="col-10 col-md-6 mx-auto text-yellow text-center text-capitalize">
-          <h3>
-            all right reserved &copy;
-            {new Date().getFullYear().toString()}
-          </h3>
-        </div>
-      </div>
-    </div>
-  </footer>
-);
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://fairycake.com/">
+        fairycake.com
+      </Link>{' '}
+      {new Date().getFullYear()}.
+    </Typography>
+  );
+}
+
+const useStyles = makeStyles(theme => ({
+  footer: {
+    padding: theme.spacing(3),
+  },
+}));
+
+const Footer = () => {
+  const classes = useStyles();
+
+  return (
+    <footer className={classes.footer}>
+      <Typography variant="h6" align="center" gutterBottom>
+        FairyCake
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        align="center"
+        color="textSecondary"
+        component="p"
+      >
+        Baking and decorating supplies from 1066 A.D.
+      </Typography>
+      <Copyright />
+    </footer>
+  );
+};
 
 export default Footer;
