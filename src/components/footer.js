@@ -27,17 +27,6 @@ const Footer = () => {
 
   return (
     <footer className={classes.footer}>
-      <Typography variant="h6" align="center" gutterBottom>
-        FairyCake
-      </Typography>
-      <Typography
-        variant="subtitle1"
-        align="center"
-        color="textSecondary"
-        component="p"
-      >
-        Baking and decorating supplies from 1066 A.D.
-      </Typography>
       <Copyright />
     </footer>
   );
