@@ -15,6 +15,7 @@
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-material-ui": "^2.1.6",
     "gatsby-plugin-offline": "^3.1.2",
+    "gatsby-plugin-postcss": "^2.3.3",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-sharp": "^2.5.3",
@@ -29,7 +30,8 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.9.0",
     "styled-components": "^5.0.1",
-    "tailwind.macro": "^1.0.0-alpha.10"
+    "tailwind.macro": "^1.0.0-alpha.10",
+    "tailwindcss": "^1.4.6"
   },
   "keywords": [
     "gatsby",
