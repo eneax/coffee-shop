@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { HeadingTwo } from './headings';
-import { Container, InfoWrapper } from './styles/globalStyles';
 
 const InfoSection = styled.section`
   padding-top: 3rem;
@@ -42,8 +41,8 @@ const Input = styled.input`
 
 const Newsletter = () => (
   <InfoSection>
-    <Container>
-      <InfoWrapper>
+    <div>
+      <div>
         <HeadingTwo header="Join Our Newsletter" />
 
         {/* Begin MailChimp Signup Form */}
@@ -93,8 +92,8 @@ const Newsletter = () => (
           </form>
         </div>
         {/* End MailChimp Signup Form */}
-      </InfoWrapper>
-    </Container>
+      </div>
+    </div>
   </InfoSection>
 );
 
