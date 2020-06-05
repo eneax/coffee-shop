@@ -7,7 +7,7 @@ import './layout.css';
 const Layout = ({ children }) => (
   <>
     <Header />
-    {children}
+    <main>{children}</main>
   </>
 );
 
