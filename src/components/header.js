@@ -6,8 +6,8 @@ import { FiCoffee, FiShoppingBag } from 'react-icons/fi';
 const navItems = ['About', 'Contact', 'Shop'];
 
 const Header = () => (
-  <header className="text-gray-500 bg-gray-900">
-    <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+  <header className="text-gray-500 bg-transparent top-0 absolute z-50 w-full">
+    <div className=" container flex mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <Link
         to="/"
         className="flex font-medium items-center text-white mb-4 md:mb-0 hover:cursor-pointer"
@@ -26,9 +26,9 @@ const Header = () => (
             {item}
           </Link>
         ))}
-      </nav>
 
-      <FiShoppingBag className="w-4 h-4 ml-1 hover:cursor-pointer snipcart-checkout" />
+        <FiShoppingBag className="w-4 h-4 ml-1 hover:cursor-pointer snipcart-checkout" />
+      </nav>
     </div>
   </header>
 );
