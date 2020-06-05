@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 import { FiCoffee, FiShoppingBag } from 'react-icons/fi';
 
-const navItems = ['About', 'Contact', 'Shop'];
+const navItems = ['Contact', 'Shop'];
 
 const Header = () => (
   <header className="text-gray-500 bg-transparent top-0 absolute z-50 w-full">
