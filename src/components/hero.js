@@ -36,7 +36,10 @@ const Hero = () => (
                       Because life is sweet
                     </h1>
                     <p className="mt-4 text-lg text-gray-300">
-                      Baking and decorating supplies
+                      Welcome to Fairy Cake - your home for all things baking
+                      and decorating. From cups and toppers to pearls and gems,
+                      we’ve got your cake covered. If you can dream it, we’ll
+                      help you create it. Let’s get baking!
                     </p>
                   </div>
                 </div>
@@ -44,7 +47,7 @@ const Hero = () => (
             </div>
             <div
               className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-              style={{ height: '70px; transform: translateZ(0px)' }}
+              style={{ height: '70px', transform: 'translateZ(0px)' }}
             >
               <svg
                 className="absolute bottom-0 overflow-hidden"
