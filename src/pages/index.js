@@ -4,16 +4,19 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Hero from '../components/hero';
+
 import Info from '../components/info';
 import Menu from '../components/menu/menu';
-
 import Newsletter from '../components/newsletter';
+
+import Hero from '../components/hero';
 
 const Homepage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <Hero img={data.bgImg.childImageSharp.fluid} />
+
+    <Hero />
+
     <Info />
     <Menu items={data.menu} />
     <Newsletter />
@@ -24,13 +27,6 @@ export default Homepage;
 
 export const query = graphql`
   {
-    bgImg: file(relativePath: { eq: "default-background.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     menu: allContentfulCoffeeItem(sort: { fields: createdAt }) {
       edges {
         node {
