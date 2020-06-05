@@ -25,7 +25,7 @@ const Hero = () => (
         >
           <div
             id="blackOverlay"
-            className="relative pt-16 pb-32 flex content-center items-center justify-center opacity-50 bg-black"
+            className="relative pt-16 pb-32 flex content-center items-center justify-center opacity-75 bg-black"
             style={{ minHeight: '75vh' }}
           >
             <div className="container relative mx-auto">
