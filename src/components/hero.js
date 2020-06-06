@@ -19,21 +19,21 @@ const Hero = () => (
       const imageData = data.bgImg.childImageSharp.fluid;
 
       return (
-        <BackgroundImage
-          fluid={imageData}
-          className="absolute top-0 w-full h-full bg-center bg-cover"
-        >
-          <div
+        <BackgroundImage fluid={imageData}>
+          <span
             id="blackOverlay"
-            className="relative pt-16 pb-32 flex content-center items-center justify-center opacity-75 bg-black"
+            className="w-full h-full absolute opacity-75 bg-black"
+          />
+          <div
+            className="relative pt-16 pb-32 flex content-center items-center justify-center"
             style={{ minHeight: '75vh' }}
           >
             <div className="container relative mx-auto">
               <div className="items-center flex flex-wrap">
                 <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                  <div className="">
+                  <div>
                     <h1 className="text-white font-semibold text-5xl">
-                      Because life is sweet
+                      Because life is sweet.
                     </h1>
                     <p className="mt-4 text-lg text-gray-300">
                       Welcome to Fairy Cake - your home for all things baking
