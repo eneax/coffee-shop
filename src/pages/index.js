@@ -5,19 +5,18 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-import Info from '../components/info';
+import Hero from '../components/hero';
+import About from '../components/about';
 import Menu from '../components/menu/menu';
 import Newsletter from '../components/newsletter';
 
-import Hero from '../components/hero';
-
 const Homepage = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" />
 
     <Hero />
+    <About />
 
-    <Info />
     <Menu items={data.menu} />
     <Newsletter />
   </Layout>
