@@ -1,49 +1,29 @@
 import React from 'react';
-import styled from 'styled-components';
-import { HeadingTwo } from './headings';
-
-const InfoSection = styled.section`
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-`;
-
-const Input = styled.input`
-  display: inline-block;
-  font-weight: 400;
-  color: rgb(255, 158, 9);
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid rgb(255, 158, 9);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
-  &:hover {
-    background: rgb(255, 158, 9);
-    color: #2d1e1f;
-  }
-  &:focus,
-  &.focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
-
-  text-transform: uppercase;
-`;
 
 const Newsletter = () => (
-  <InfoSection>
-    <div>
-      <div>
-        <HeadingTwo header="Join Our Newsletter" />
+  <section className="relative py-20">
+    <div
+      className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+      style={{ height: '80px', transform: 'translateZ(0px)' }}
+    >
+      <svg
+        className="absolute bottom-0 overflow-hidden"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        version="1.1"
+        viewBox="0 0 2560 100"
+        x="0"
+        y="0"
+      >
+        <polygon
+          className="text-white fill-current"
+          points="2560 0 2560 100 0 100"
+        />
+      </svg>
+    </div>
+    <div className="container mx-auto px-4">
+      <div className="items-center flex flex-wrap">
+        <h2>Join our newsletter</h2>
 
         {/* Begin MailChimp Signup Form */}
         <link
@@ -80,7 +60,7 @@ const Newsletter = () => (
                 />
               </div>
               <div className="clear">
-                <Input
+                <input
                   style={{ border: '1px solid rgb(255, 158, 9)' }}
                   type="submit"
                   value="Subscribe"
@@ -94,7 +74,7 @@ const Newsletter = () => (
         {/* End MailChimp Signup Form */}
       </div>
     </div>
-  </InfoSection>
+  </section>
 );
 
 export default Newsletter;
