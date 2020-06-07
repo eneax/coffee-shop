@@ -3,8 +3,6 @@ import { Link } from 'gatsby';
 
 import { FiCoffee, FiShoppingBag } from 'react-icons/fi';
 
-const navItems = ['Contact', 'Shop'];
-
 const Header = () => (
   <header className="text-gray-500 bg-transparent top-0 absolute z-50 w-full">
     <div className=" container flex mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -17,15 +15,9 @@ const Header = () => (
       </Link>
 
       <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        {navItems.map(item => (
-          <Link
-            key={item}
-            to={`/${item.toLowerCase()}`}
-            className="mr-5 hover:text-white"
-          >
-            {item}
-          </Link>
-        ))}
+        <Link to="/shop" className="mr-5 hover:text-white">
+          Shop
+        </Link>
 
         <FiShoppingBag className="w-4 h-4 ml-1 hover:cursor-pointer snipcart-checkout" />
       </nav>
