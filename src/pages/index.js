@@ -7,8 +7,8 @@ import SEO from '../components/seo';
 
 import Hero from '../components/hero';
 import About from '../components/about';
-import Menu from '../components/menu/menu';
-import Newsletter from '../components/newsletter';
+import Menu from '../components/menu';
+import Contact from '../components/contact';
 
 const Homepage = ({ data }) => (
   <Layout>
@@ -16,9 +16,8 @@ const Homepage = ({ data }) => (
 
     <Hero />
     <About />
-
-    <Menu items={data.menu} />
-    <Newsletter />
+    <Menu color="green" items={data.menu} />
+    <Contact />
   </Layout>
 );
 
