@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { FiCoffee } from 'react-icons/fi';
 
-import { FiCoffee, FiShoppingBag } from 'react-icons/fi';
+import Cart from './cart';
 
 const Header = () => (
   <header className="text-gray-500 bg-transparent top-0 absolute z-50 w-full">
@@ -19,7 +20,7 @@ const Header = () => (
           Shop
         </Link>
 
-        <FiShoppingBag className="w-4 h-4 ml-1 hover:cursor-pointer snipcart-checkout" />
+        <Cart />
       </nav>
     </div>
   </header>
