@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiShoppingBag } from 'react-icons/fi';
+import { AiOutlineShopping } from 'react-icons/ai';
 
 const Cart = () => {
   const [items, setItems] = React.useState(0);
@@ -33,10 +33,10 @@ const Cart = () => {
     <div className="snipcart-summary">
       <button
         type="button"
-        className="bg-red-400 text-white p-2 rounded leading-none flex items-center snipcart-checkout"
+        className="leading-none flex items-center snipcart-checkout"
       >
-        <FiShoppingBag className="w-4 h-4 ml-1 cursor-pointer" />
-        <span className="bg-white p-1 rounded text-red-600 text-xs ml-2">
+        <AiOutlineShopping className="w-6 h-6 ml-1 cursor-pointer" />
+        <span className="bg-red-400 rounded-full p-1 text-white text-xs mb-4 -ml-2">
           {items}
         </span>
       </button>
