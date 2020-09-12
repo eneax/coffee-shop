@@ -25,7 +25,7 @@ const Contact = () => (
       <div className="container mx-auto pt-24 px-4 pb-12 lg:pb-56">
         <div className="flex flex-wrap text-center justify-center">
           <div className="w-full lg:w-6/12 px-4">
-            <h2 className="text-4xl font-semibold text-white">Get in touch</h2>
+            <h2 className="text-4xl font-semibold text-white">Contact us</h2>
             <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
               Complete this form and we will get back to you in 24 hours.
             </p>

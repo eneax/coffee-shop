@@ -49,11 +49,11 @@ const Menu = ({ color, items }) => {
           </svg>
         </div>
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center text-center mb-24">
+          <div className="flex flex-wrap justify-center text-center mb-12 lg:mb-24">
             <div className="w-full lg:w-6/12 px-4">
               <h2 className="text-4xl font-semibold">Best Of Our Menu</h2>
               <p className="text-lg leading-relaxed m-4 text-gray-600">
-                Enjoy the greatest menu ever made
+                Enjoy the greatest menu of all time
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ const Menu = ({ color, items }) => {
               >
                 {categories.map((category, id) => (
                   <li
-                    className="-mb-px mr-2 last:mr-0 flex-auto text-center"
+                    className="mt-2 -mb-px mr-2 last:mr-0 flex-auto text-center"
                     key={category}
                   >
                     <span
@@ -81,9 +81,6 @@ const Menu = ({ color, items }) => {
                       onClick={() => {
                         handleItems(category);
                         setActive(id);
-                        console.log('category', category);
-                        console.log('categories', categories);
-                        console.log('check', coffeeItems.includes(category));
                       }}
                     >
                       {category}
@@ -94,7 +91,7 @@ const Menu = ({ color, items }) => {
 
               {/* menu items */}
               <div className="relative flex flex-col min-w-0 w-full mb-6">
-                <div className="px-4 py-5 flex-auto">
+                <div className="py-5 flex-auto">
                   <div className="tab-content tab-space">
                     <div className="flex flex-wrap">
                       {coffeeItems.map(({ node }) => (
