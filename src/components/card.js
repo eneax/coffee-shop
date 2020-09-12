@@ -2,61 +2,40 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
-
-import { fluidObject } from '../utils';
-
-const useStyles = makeStyles(theme => ({
-  card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  cardContent: {
-    flexGrow: 1,
-    color: theme.palette.text.secondary,
-  },
-  price: {
-    cursor: 'default',
-    pointerEvents: 'none',
-  },
-}));
-
-const CustomCard = ({ img, title, price, description }) => {
-  const classes = useStyles();
-
-  return (
-    <Card className={classes.card}>
-      <CardMedia>
-        <Img fluid={img} />
-      </CardMedia>
-
-      <CardContent className={classes.cardContent}>
-        <Typography gutterBottom variant="h5" component="h2">
-          {title}
-        </Typography>
-        <Typography>{description}</Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small" color="primary" className={classes.price}>
+const Card = ({ id, image, title, description, price }) => (
+  <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
+    <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ">
+      <Img
+        fluid={image.fluid}
+        alt={`${title}`}
+        className="w-full align-middle rounded-t-lg object-cover"
+        style={{
+          height: '15vw',
+        }}
+      />
+      <blockquote className="relative p-8 mb-4">
+        <svg
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 583 95"
+          className="absolute left-0 w-full block"
+          style={{ height: '95px', top: '-94px' }}
+        >
+          <polygon
+            points="-30,95 583,95 583,65"
+            className="text-white fill-current"
+          />
+        </svg>
+        <h4 className="text-xl font-bold ">{title}</h4>
+        <p className="text-md font-light mt-2">{description.description}</p>
+        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-4 mb-2">
           ${price.toFixed(2)}
-        </Button>
-      </CardActions>
-    </Card>
-  );
-};
+        </span>
+      </blockquote>
+    </div>
+  </div>
+);
 
-CustomCard.propTypes = {
-  img: fluidObject.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-};
+Card.propTypes = {};
 
-export default CustomCard;
+export default Card;
