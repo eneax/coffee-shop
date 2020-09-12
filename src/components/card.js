@@ -4,14 +4,11 @@ import Img from 'gatsby-image';
 
 const Card = ({ id, image, title, description, price }) => (
   <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-    <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ">
+    <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg">
       <Img
         fluid={image.fluid}
         alt={`${title}`}
-        className="w-full align-middle rounded-t-lg object-cover"
-        style={{
-          height: '15vw',
-        }}
+        className="w-full align-middle rounded-t-lg object-cover h-64"
       />
       <blockquote className="relative p-8 mb-4">
         <svg
