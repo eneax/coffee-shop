@@ -103,7 +103,7 @@ const Info = () => {
               </span>
             </Link>
           </div>
-          <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
+          <div className="w-full md:w-4/12 px-4 mt-4 mr-auto ml-auto">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
               <Img
                 fluid={aboutUsPic}
