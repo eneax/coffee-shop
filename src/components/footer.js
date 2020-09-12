@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Newsletter from './newsletter';
+
 const Footer = () => (
   <footer className="relative pt-8 pb-6 bg-gray-300">
     <div
@@ -30,13 +32,7 @@ const Footer = () => (
             Join our newsletter and never miss out the latest news from us
           </h5>
           <div className="text-center mt-6">
-            <button
-              className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-              type="button"
-              style={{ transition: 'all 0.15s ease 0s;' }}
-            >
-              Subscribe
-            </button>
+            <Newsletter />
           </div>
         </div>
       </div>
