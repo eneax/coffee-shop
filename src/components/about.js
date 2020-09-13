@@ -1,13 +1,7 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import {
-  FiTarget,
-  FiHeart,
-  FiAward,
-  FiUsers,
-  FiArrowRight,
-} from 'react-icons/fi';
+import { FiTarget, FiHeart, FiAward } from 'react-icons/fi';
 
 const Info = () => {
   const data = useStaticQuery(graphql`
@@ -71,11 +65,9 @@ const Info = () => {
             </div>
           </div>
         </div>
+
         <div className="flex flex-wrap items-center mt-32">
           <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-            <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
-              <FiUsers />
-            </div>
             <h3 className="text-3xl mb-2 font-semibold leading-normal">
               About us
             </h3>
@@ -97,14 +89,10 @@ const Info = () => {
               BUST Magazine, InStyle Magazine, Woman's Day Magazine, Sandra Lee
               Semi-Homemade Magazine, and more.
             </p>
-            <Link to="/shop" className="font-bold text-gray-800 mt-8">
-              <span className="flex items-center">
-                Shop Now <FiArrowRight className="ml-1" />
-              </span>
-            </Link>
           </div>
+
           <div className="w-full md:w-4/12 px-4 mt-4 mr-auto ml-auto">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
+            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blue-500">
               <Img
                 fluid={aboutUsPic}
                 alt="About Us Image"
@@ -120,7 +108,7 @@ const Info = () => {
                 >
                   <polygon
                     points="-30,95 583,95 583,65"
-                    className="text-pink-600 fill-current"
+                    className="text-blue-500 fill-current"
                   />
                 </svg>
                 <h4 className="text-xl font-bold text-white">
