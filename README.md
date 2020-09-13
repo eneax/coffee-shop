@@ -1,8 +1,8 @@
 <h1 align="center">
-  The Coffee Shop
+  ☕ The Coffee Shop
 </h1>
 
-Responsive coffee shop website built with Gatsby, GraphQL, Contentful and Snipcart.
+Responsive coffee shop website built with Gatsby, Tailwind CSS, Contentful and Snipcart.
 
 ## 🚀 Quick start
 

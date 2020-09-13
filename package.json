@@ -1,6 +1,6 @@
 {
   "name": "coffee-shop",
-  "description": "Responsive coffee shop website built with Gatsby, GraphQL, Contentful and Snipcart",
+  "description": "Responsive coffee shop website built with Gatsby, Tailwind CSS, Contentful and Snipcart",
   "version": "1.0.0",
   "author": "Enea Xharja <eneaxharja@gmail.com>",
   "dependencies": {
@@ -27,6 +27,7 @@
   },
   "keywords": [
     "gatsby",
+    "tailwindcss",
     "contentful",
     "snipcart"
   ],

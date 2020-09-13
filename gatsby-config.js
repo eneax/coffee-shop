@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `The Coffee Shop`,
-    description: `Responsive coffee shop website built with Gatsby.`,
+    description: `Responsive coffee shop website built with Gatsby, Tailwind CSS, Contentful and Snipcart`,
     author: `@eneax`,
   },
   plugins: [
