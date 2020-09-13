@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
-const Card = ({ id, image, title, description, price }) => (
+const Card = ({ id, image, title, description: { description }, price }) => (
   <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
     <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg">
       <Img
@@ -23,16 +23,33 @@ const Card = ({ id, image, title, description, price }) => (
             className="text-white fill-current"
           />
         </svg>
-        <h4 className="text-xl font-bold ">{title}</h4>
-        <p className="text-md font-light mt-2">{description.description}</p>
+        <h4 className="text-xl font-bold">{title}</h4>
+        <p className="text-md font-light mt-2">{description}</p>
         <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-4 mb-2">
           ${price.toFixed(2)}
         </span>
       </blockquote>
+      <button
+        type="button"
+        className="bg-green-900 text-white active:bg-green-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mx-8 my-4 cursor-pointer snipcart-add-item"
+        data-item-id={id}
+        data-item-name={title}
+        data-item-price={price}
+        data-item-image={image.fluid.src}
+        data-item-url="https://coffee-shop-x.netlify.com/"
+      >
+        Add to cart
+      </button>
     </div>
   </div>
 );
 
-Card.propTypes = {};
+Card.propTypes = {
+  id: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.object.isRequired,
+  price: PropTypes.number.isRequired,
+};
 
 export default Card;
