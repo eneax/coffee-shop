@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Joe's Coffee Shop`,
+    title: `The Coffee Shop`,
     description: `Responsive coffee shop website built with Gatsby.`,
     author: `@eneax`,
   },
@@ -57,15 +57,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-material-ui`,
-      options: {
-        stylesProvider: {
-          injectFirst: true,
-        },
-      },
-    },
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-postcss`,
     'gatsby-plugin-offline',
   ],

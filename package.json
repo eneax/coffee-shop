@@ -1,26 +1,20 @@
 {
   "name": "coffee-shop",
-  "description": "Responsive coffee shop website built with Gatsby, Contentful and GraphQL",
+  "description": "Responsive coffee shop website built with Gatsby, GraphQL, Contentful and Snipcart",
   "version": "1.0.0",
   "author": "Enea Xharja <eneaxharja@gmail.com>",
   "dependencies": {
-    "@material-ui/core": "^4.9.9",
-    "@material-ui/icons": "^4.9.1",
-    "@material-ui/styles": "^4.9.6",
-    "babel-plugin-styled-components": "^1.10.7",
     "dotenv": "^8.2.0",
     "gatsby": "^2.20.10",
     "gatsby-background-image": "^1.0.1",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-manifest": "^2.3.3",
-    "gatsby-plugin-material-ui": "^2.1.6",
     "gatsby-plugin-offline": "^3.1.2",
     "gatsby-plugin-postcss": "^2.3.3",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-sharp": "^2.6.35",
     "gatsby-plugin-snipcart": "^1.1.2",
-    "gatsby-plugin-styled-components": "^3.2.1",
     "gatsby-source-contentful": "^2.2.5",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-sharp": "^2.4.3",
@@ -29,8 +23,6 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.9.0",
-    "styled-components": "^5.0.1",
-    "tailwind.macro": "^1.0.0-alpha.10",
     "tailwindcss": "^1.4.6"
   },
   "keywords": [
@@ -44,8 +36,8 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "lint": "eslint src/",
-    "lint:fix": "eslint src/ --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
