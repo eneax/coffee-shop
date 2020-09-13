@@ -31,7 +31,7 @@ const Card = ({ id, image, title, description: { description }, price }) => (
       </blockquote>
       <button
         type="button"
-        className="bg-green-900 text-white active:bg-green-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mx-8 my-4 cursor-pointer snipcart-add-item"
+        className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mx-8 my-4 cursor-pointer snipcart-add-item"
         data-item-id={id}
         data-item-name={title}
         data-item-price={price}
