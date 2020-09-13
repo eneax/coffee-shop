@@ -11,8 +11,8 @@ const Header = () => (
         to="/"
         className="flex font-medium items-center text-white mb-4 md:mb-0 hover:cursor-pointer"
       >
-        <FiCoffee className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" />
-        <span className="ml-3 text-xl">Fairy Cake</span>
+        <FiCoffee className="w-10 h-10 text-white p-2 bg-gray-900 rounded-full" />
+        <span className="ml-3 text-xl">The Coffee Shop</span>
       </Link>
 
       <Cart />

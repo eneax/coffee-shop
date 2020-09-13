@@ -43,7 +43,7 @@ const Homepage = () => {
 
       <Hero />
       <About />
-      <Menu color="green" items={menu} />
+      <Menu color="gray" items={menu} />
       <Contact />
     </Layout>
   );

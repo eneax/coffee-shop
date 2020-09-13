@@ -33,13 +33,12 @@ const Hero = () => {
             <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
               <div>
                 <h1 className="text-white font-semibold text-5xl">
-                  Because life is sweet.
+                  Coffee Ipsum
                 </h1>
                 <p className="mt-4 text-lg text-gray-300">
-                  Welcome to Fairy Cake - your home for all things baking and
-                  decorating. From cups and toppers to pearls and gems, we’ve
-                  got your cake covered. If you can dream it, we’ll help you
-                  create it. Let’s get baking!
+                  Welcome to The Coffee Shop - Macchiato acerbic est caffeine a
+                  roast acerbic french press a, cup kopi-luwak instant barista
+                  saucer crema instant caffeine aroma decaffeinated.
                 </p>
               </div>
             </div>

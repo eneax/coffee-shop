@@ -76,8 +76,8 @@ const Menu = ({ color, items }) => {
                       role="button"
                       className={`text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal ${
                         active === id
-                          ? `text-white bg-${color}-600`
-                          : `text-${color}-600 bg-white`
+                          ? `text-white bg-${color}-700`
+                          : `text-${color}-700 bg-white`
                       }`}
                       aria-hidden="true"
                       onClick={() => {
