@@ -39,7 +39,12 @@ const Contact = () => (
           <div className="w-full lg:w-6/12 px-4">
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
               <div className="flex-auto p-5 lg:p-8">
-                <form action="POST" data-netlify="true">
+                <form
+                  name="contact"
+                  method="post"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                >
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-gray-700 text-xs font-bold"
