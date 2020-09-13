@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Card from './card';
 
 const getCategories = items => {
@@ -94,8 +96,8 @@ const Menu = ({ color, items }) => {
                 <div className="py-5 flex-auto">
                   <div className="tab-content tab-space">
                     <div className="flex flex-wrap">
-                      {coffeeItems.map(({ node }) => (
-                        <Card {...node} />
+                      {coffeeItems.map(({ node: { id }, node }) => (
+                        <Card {...node} key={id} />
                       ))}
                     </div>
                   </div>
@@ -107,6 +109,11 @@ const Menu = ({ color, items }) => {
       </section>
     </>
   );
+};
+
+Menu.propTypes = {
+  color: PropTypes.string.isRequired,
+  items: PropTypes.object.isRequired,
 };
 
 export default Menu;
