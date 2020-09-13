@@ -11,22 +11,7 @@ import Contact from '../components/contact';
 
 const getHomeData = graphql`
   {
-    homepageYaml {
-      homepage {
-        hero {
-          bgImg {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          mainHeading
-          text
-        }
-      }
-    }
-    menu: allContentfulCoffeeItem(sort: { fields: createdAt }) {
+    menu: allContentfulCoffeeItem(sort: { fields: category, order: DESC }) {
       edges {
         node {
           id
@@ -38,6 +23,7 @@ const getHomeData = graphql`
           category
           image {
             fluid {
+              src # it's needed for Snipcart
               ...GatsbyContentfulFluid
             }
           }
@@ -49,18 +35,13 @@ const getHomeData = graphql`
 
 const Homepage = () => {
   const response = useStaticQuery(getHomeData);
-  const {
-    homepageYaml: {
-      homepage: { hero },
-    },
-    menu,
-  } = response;
+  const { menu } = response;
 
   return (
     <Layout>
       <SEO title="Home" />
 
-      <Hero {...hero} />
+      <Hero />
       <About />
       <Menu color="green" items={menu} />
       <Contact />
