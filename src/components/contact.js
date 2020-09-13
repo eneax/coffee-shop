@@ -41,7 +41,8 @@ const Contact = () => (
               <div className="flex-auto p-5 lg:p-8">
                 <form
                   name="contact"
-                  method="post"
+                  method="POST"
+                  action="thank-you"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                 >
